@@ -11,4 +11,4 @@ I'll try my best to upgrade the code to draw complex panel design too.
 By now it consists of 5000 lines of code for 6 sections and 6 partition
 
 # CREDITS
-My credits to the developer of the pyautocad and pywin32 module..
+My credits to the developer of the pyautocad and pywin32 module.
