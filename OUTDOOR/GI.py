@@ -198,5 +198,8 @@ elif section == "5":
 elif section == "6":
     import section6
 
+elif section == "1":
+    import section1
+
 else:
     print("enter correct choice in section")

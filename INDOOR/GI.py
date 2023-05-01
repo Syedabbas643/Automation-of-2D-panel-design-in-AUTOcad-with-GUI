@@ -8,7 +8,7 @@ acad1.visible = True
 acadmodel = acad1.activedocument.modelspace
 
 config = ConfigParser()
-config.read('./INDOOR/V_section_panel/gi_config_in.ini')
+config.read('./INDDOOR/gi_config_in.ini')
 
 acad = Autocad(create_if_not_exists=True)
 acad.prompt("Hello, Autocad from GaMeR")
@@ -181,6 +181,9 @@ elif section == "5":
 
 elif section == "6":
     import section6
+
+elif section == "1":
+    import section1
  
 else:
     print("enter correct choice in section")

@@ -1,6 +1,6 @@
 from pyautocad import Autocad, APoint
 from configparser import ConfigParser
-from partition_gi import partition2,partition3,partition4,partition5,partition6
+from partition_gi import partition2,partition3,partition4,partition5,partition6,partition1
 from GI import l
 from GI import vchannel
 from GI import thick
@@ -262,6 +262,9 @@ elif partition3_1 == "5":
 elif partition3_1 == "6":
         partition6(pz12,pz11,s1,s2,zleft,u1,"1","left")
 
+elif partition3_1 == "1":
+        partition1(pz12,pz11,s1,s2,zleft,u1,"1","left")
+
 else:
         print("enter correct choice in partition")
 
@@ -281,6 +284,9 @@ elif partition3_2 == "5":
 
 elif partition3_2 == "6":
         partition6(s4,s3,s5,s6,u1,u2,"2","mid")
+
+elif partition3_2 == "1":
+        partition1(s4,s3,s5,s6,u1,u2,"2","mid")
 
 else:
         print("enter correct choice in partition")
@@ -302,6 +308,9 @@ elif partition3_3 == "5":
 elif partition3_3 == "6":
         partition6(s8,s7,s9,s10,u2,u3,"3","mid")
 
+elif partition3_3 == "1":
+        partition1(s8,s7,s9,s10,u2,u3,"3","mid")
+
 else:
         print("enter correct choice in partition")
 
@@ -322,6 +331,9 @@ elif partition3_4 == "5":
 elif partition3_4 == "6":
         partition6(s12,s11,s13,s14,u3,u4,"4","mid")
 
+elif partition3_4 == "1":
+        partition1(s12,s11,s13,s14,u3,u4,"4","mid")
+
 else:
         print("enter correct choice in partition")
 
@@ -341,6 +353,10 @@ elif partition3_5 == "5":
 
 elif partition3_5 == "6":
         partition6(s16,s15,s17,s18,u4,u5,"5","mid")
+
+elif partition3_5 == "1":
+        partition1(s16,s15,s17,s18,u4,u5,"5","mid")
+
 else:
         print("enter correct choice in partition")
 
@@ -370,6 +386,12 @@ elif partition3_5 == "6":
         x1 = APoint(pz8.x + thick,pz8.y)
         x2 = APoint(pz7.x + thick,pz7.y)
         partition6(s20,s19,x1,x2,u5,zright,"6","right")
+
+elif partition3_5 == "1":
+        x1 = APoint(pz8.x + thick,pz8.y)
+        x2 = APoint(pz7.x + thick,pz7.y)
+        partition1(s20,s19,x1,x2,u5,zright,"6","right")
+
 else:
         print("enter correct choice in partition")
 

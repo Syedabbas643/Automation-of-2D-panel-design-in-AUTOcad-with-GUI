@@ -56,7 +56,7 @@ def partition1(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
         elif h == 'mid':
                 #FOR DOORS
@@ -66,7 +66,7 @@ def partition1(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
         elif h == "right":
                 if g == '1':
                         sec1 = int(config["section"]["Sec_1"])
@@ -79,7 +79,7 @@ def partition1(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
                 elif g == "2":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -91,7 +91,7 @@ def partition1(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                 elif g == "3":
                         sec1 = int(config["section"]["Sec_1"])
@@ -104,7 +104,7 @@ def partition1(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                 elif g == '4':
                         sec1 = int(config["section"]["Sec_1"])
@@ -117,7 +117,7 @@ def partition1(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                 elif g =='5':
                         sec1 = int(config["section"]["Sec_1"])
@@ -130,7 +130,7 @@ def partition1(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
                 elif g == "6":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -143,7 +143,7 @@ def partition1(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
 
 
@@ -244,13 +244,13 @@ def partition2(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = width - part1 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = c4
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top",h)
 
                 
         elif h == 'mid':
@@ -261,13 +261,13 @@ def partition2(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                 a1 = sec1 - dclear
                 b1 = width - part1 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = c4
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top",h)
         elif h == 'right':
                 if g == "1":
                         sec1 = int(config["section"]["Sec_1"])
@@ -280,13 +280,13 @@ def partition2(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = width - part1 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = c4
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top",h)
                 elif g == "2":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -298,13 +298,13 @@ def partition2(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                         a1 = lenght - sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = c4
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top",h)
                 elif g == "3":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -316,13 +316,13 @@ def partition2(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                         a1 = lenght - sec1 - sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = c4
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top",h)
                 elif g == "4":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -334,13 +334,13 @@ def partition2(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                         a1 = lenght - sec1 - sec2 - sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = c4
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top",h)
                 elif g == "5":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -352,13 +352,13 @@ def partition2(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                         a1 = lenght - sec1 - sec2 -sec3 -sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = c4
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top",h)
                 elif g == "6":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -371,13 +371,13 @@ def partition2(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,c100,"bot",h)
 
                         a1 = lenght - sec1 - sec2 -sec3 -sec4 -sec5 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = c4
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,c4,"top",h)
 
 def partition3(a,b,c,d,e,f,g,h):
         part1 = int(config["section"+g+"_partition"]["part1"])
@@ -505,19 +505,19 @@ def partition3(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part2 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs5v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = width - part1 - part2 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs8v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top",h)
 
                 
 
@@ -530,19 +530,19 @@ def partition3(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                 a1 = sec1 - dclear
                 b1 = part2 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs5v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = width - part1 - part2 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs8v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top",h)
 
         elif h == "right":
                 if g == "1":
@@ -557,19 +557,19 @@ def partition3(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = width - part1 - part2 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top",h)
                 elif g =="2":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -582,19 +582,19 @@ def partition3(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - part2 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top",h)
 
                 elif g == "3":
                         sec1 = int(config["section"]["Sec_1"])
@@ -608,19 +608,19 @@ def partition3(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1 - sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1 - sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - part2 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top",h)
 
                 elif g == "4":
                         sec1 = int(config["section"]["Sec_1"])
@@ -634,19 +634,19 @@ def partition3(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1 - sec2 - sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1 - sec2 - sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - part2 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top",h)
                 elif g == "5":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -659,19 +659,19 @@ def partition3(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1 - sec2 - sec3- sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1 - sec2 - sec3- sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - part2 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top",h)
 
                 elif g == "6":
                         sec1 = int(config["section"]["Sec_1"])
@@ -685,19 +685,19 @@ def partition3(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1 - sec2 - sec3 - sec4 - sec5 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1 - sec2 - sec3 - sec4 - sec5 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width - part1 - part2 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"top",h)
 
 
 def partition4(a,b,c,d,e,f,g,h):
@@ -856,25 +856,25 @@ def partition4(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part2 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs5v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part3 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs8v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = width -part1 - part2 - part3 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs10v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top",h)
 
         elif h == "mid":
                 sec1 = int(config["section"]["Sec_"+g])
@@ -884,25 +884,25 @@ def partition4(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                 a1 = sec1 - dclear
                 b1 = part2 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs5v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = part3 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs8v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = width -part1 - part2 - part3 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs10v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top",h)
         elif h == "right":
                 if g == "1":
                         #FOR DOORS
@@ -911,25 +911,25 @@ def partition4(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick- (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick- (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick- (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top",h)
                 elif g == "2":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -942,25 +942,25 @@ def partition4(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top",h)
 
                 elif g == "3":
                         sec1 = int(config["section"]["Sec_1"])
@@ -974,25 +974,25 @@ def partition4(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top",h)
 
                 elif g == "4":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1006,25 +1006,25 @@ def partition4(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top",h)
 
                 elif g == "5":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1038,25 +1038,25 @@ def partition4(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3-sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3-sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top",h)
 
                 elif g == "6":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1070,25 +1070,25 @@ def partition4(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3-sec4-sec5 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4-sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3-sec4 -sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"top",h)
 
 
 def partition5(a,b,c,d,e,f,g,h):
@@ -1275,31 +1275,31 @@ def partition5(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part2 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs5v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part3 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs8v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part4 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs10v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = width -part1 - part2 - part3- part4 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs12v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top",h)
 
         elif h == "mid":
                 sec1 = int(config["section"]["Sec_"+g])
@@ -1309,31 +1309,31 @@ def partition5(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                 a1 = sec1 - dclear
                 b1 = part2 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs5v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = part3 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs8v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = part4 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs10v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = width -part1 - part2 - part3 - part4 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs12v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top",h)
         elif h == "right":
                 if g == "1":
                         #FOR DOORS
@@ -1342,31 +1342,31 @@ def partition5(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - part4 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top",h)
                 elif g == "2":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -1379,31 +1379,31 @@ def partition5(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - part4 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top",h)
 
                 elif g == "3":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1417,31 +1417,31 @@ def partition5(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3-part4 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top",h)
 
                 elif g == "4":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1455,31 +1455,31 @@ def partition5(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - part4 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top",h)
 
                 elif g == "5":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1493,31 +1493,31 @@ def partition5(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3-sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3-sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3-part4 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top",h)
 
                 elif g == "6":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1531,31 +1531,31 @@ def partition5(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3-sec4-sec5 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4-sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4-sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3-sec4 -sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - part4 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"top",h)
 
 
 
@@ -1774,37 +1774,37 @@ def partition6(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part2 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs5v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part3 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs8v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part4 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs10v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = part5 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs12v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid",h)
 
                 a1 = sec1 - (dclear/2) - (zchannelside-dclearx) - thick
                 b1 = width -part1 - part2 - part3- part4-part5 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs14v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top",h)
 
         elif h == "mid":
                 sec1 = int(config["section"]["Sec_"+g])
@@ -1814,37 +1814,37 @@ def partition6(a,b,c,d,e,f,g,h):
                 c0 = APoint(dclearx,dcleary)
                 c1 = c0 - thick
                 d1 = a
-                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                 a1 = sec1 - dclear
                 b1 = part2 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs5v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = part3 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs8v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = part4 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs10v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = part5 - dclear
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs12v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid")
+                gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid",h)
 
                 a1 = sec1 - dclear
                 b1 = width -part1 - part2 - part3 - part4-part5 - (dclear/2) - (zchanneltb-dcleary) - thick
                 c1 = APoint(dclearx,dclearmid)
                 d1 = cs14v1
-                gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top")
+                gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top",h)
         elif h == "right":
                 if g == "1":
                         #FOR DOORS
@@ -1853,37 +1853,37 @@ def partition6(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = part5 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid",h)
 
                         a1 = lenght - (zchannelside-dclearx) - thick - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - part4 -part5- (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs14v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top",h)
                 elif g == "2":
                         sec1 = int(config["section"]["Sec_1"])
                         sec2 = int(config["section"]["Sec_2"])
@@ -1896,37 +1896,37 @@ def partition6(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part5 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid",h)
 
                         a1 = lenght - sec1- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - part4 -part5- (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs14v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top",h)
 
                 elif g == "3":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1940,37 +1940,37 @@ def partition6(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part5 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3-part4-part5 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs14v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top",h)
 
                 elif g == "4":
                         sec1 = int(config["section"]["Sec_1"])
@@ -1984,37 +1984,37 @@ def partition6(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part5 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - part4-part5 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs14v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top",h)
 
                 elif g == "5":
                         sec1 = int(config["section"]["Sec_1"])
@@ -2028,37 +2028,37 @@ def partition6(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3-sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part5 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3-sec4 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3-part4-part5 - (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs14v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top",h)
 
                 elif g == "6":
                         sec1 = int(config["section"]["Sec_1"])
@@ -2072,34 +2072,34 @@ def partition6(a,b,c,d,e,f,g,h):
                         c0 = APoint(dclearx,dcleary)
                         c1 = c0 - thick
                         d1 = a
-                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_1","sec"+g,e,f,cs1v1,"bot",h)
 
                         a1 = lenght - sec1- sec2- sec3-sec4-sec5 - (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part2 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs5v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_2","sec"+g,e,f,cs5v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4-sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part3 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs8v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_3","sec"+g,e,f,cs8v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4-sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part4 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs10v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_4","sec"+g,e,f,cs10v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 -sec3-sec4-sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = part5 - dclear
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs12v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_5","sec"+g,e,f,cs12v1,"mid",h)
 
                         a1 = lenght - sec1- sec2 - sec3-sec4 -sec5- (dclear/2) - (zchannelside-dclearx) - thick
                         b1 = width -part1 - part2 - part3 - part4 -part5- (dclear/2) - (zchanneltb-dcleary) - thick
                         c1 = APoint(dclearx,dclearmid)
                         d1 = cs14v1
-                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top")
+                        gidoores(a1,b1,c1,d1,"door"+g+"_6","sec"+g,e,f,cs14v1,"top",h)

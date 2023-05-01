@@ -1,6 +1,6 @@
 from pyautocad import Autocad, APoint
 from configparser import ConfigParser
-from partition_gi import partition2,partition3,partition4,partition5,partition6
+from partition_gi import partition2,partition3,partition4,partition5,partition6,partition1
 from GI import l
 from GI import vchannel
 from GI import thick
@@ -104,7 +104,7 @@ linecb5 = zbottom.addline(czb4,czb5)
 linecb6 = zbottom.addline(czb5,czb6)
 linecb7 = zbottom.addline(czb6,pz8)
 
-#FOR PARTITION IN SECTION 1 (3 SECTION PANEL)
+#FOR PARTITION IN SECTION 1 (2 SECTION PANEL)
 partition3_1 = config["section1_partition"]["partitons"]
 if partition3_1 == "2":
         partition2(pz12,pz11,s1,s2,zleft,u1,"1","left")
@@ -120,6 +120,9 @@ elif partition3_1 == "5":
 
 elif partition3_1 == "6":
         partition6(pz12,pz11,s1,s2,zleft,u1,"1","left")
+
+elif partition3_1 == "1":
+        partition1(pz12,pz11,s1,s2,zleft,u1,"1","left")
 
 else:
         print("enter correct choice in partition")
@@ -151,6 +154,11 @@ elif partition1_2 == "6":
         x1 = APoint(pz8.x + thick,pz8.y)
         x2 = APoint(pz7.x + thick,pz7.y)
         partition6(s4,s3,x1,x2,u1,zright,"2","right")
+
+elif partition1_2 == "1":
+        x1 = APoint(pz8.x + thick,pz8.y)
+        x2 = APoint(pz7.x + thick,pz7.y)
+        partition1(s4,s3,x1,x2,u1,zright,"2","right")
 
 else:
         print("enter correct choice in partition")

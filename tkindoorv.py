@@ -15,7 +15,7 @@ def top(a):
     a.attributes("-topmost", True)
 
     config = configparser.RawConfigParser()
-    config.read('./INDOOR/V_section_panel/gi_config_in.ini')
+    config.read('./INDOOR/gi_config_in.ini')
 
     #for function place here
 
@@ -24,7 +24,7 @@ def top(a):
         #call this when you want to update a value in configuation file
         # with some changes you can save many values in many sections
         config.set(section, key, value )
-        with open('./INDOOR/V_section_panel/gi_config_in.ini', 'w') as output:
+        with open('./INDOOR/gi_config_in.ini', 'w') as output:
             config.write(output)
 
     def save():
@@ -215,6 +215,13 @@ def top(a):
             mp.remove('sec6')
             update('mounting_plate','need_mounting_plate',mp)
 
+        if type.get() == 'V Type panel':
+            update('shell','type_panel','v')
+        elif type.get() == 'H Type panel':
+            update('shell','type_panel','h')
+            update('shell','lenght',w)
+            update('shell','width',l)
+
             
 
         os.system('python ./INDOOR/V_section_panel/GI.py')
@@ -229,7 +236,7 @@ def top(a):
 
     tab_1 = tabview.add("SHELL")
     tab_2 = tabview.add("Doors")
-    tab_3 = tabview.add("Covers & MP")
+    tab_3 = tabview.add("Type & Clearences")
     tab_4 = tabview.add("Section1") 
     tab_5 = tabview.add("Section2") 
     tab_6 = tabview.add("Section3") 
@@ -911,6 +918,23 @@ def top(a):
     cthick.insert(0,cthick1)
     cthick.grid(row=0,column=1,padx=15,pady=10)
 
+    labelc10 = customtkinter.CTkLabel(cframe,text="V or H Type panel :")
+    labelc10.grid(row=0,column=2,padx=30,pady=10)
+
+    type = customtkinter.CTkOptionMenu(cframe,values=['V Type panel','H Type panel'])
+    typecheck = config.get('shell','type_panel')
+    if typecheck == 'v':
+        type.set('V Type panel')
+    elif typecheck == 'h':
+        type.set('H Type panel')
+    type.grid(row=0,column=3,padx=5,pady=10)
+
+    text = customtkinter.CTkLabel(cframe,text="If you select 'V TYPE PANEL' Consider section size from LEFT to RIGHT and partitions from BOTTOM to TOP")
+    text.grid(row=4,column=0,columnspan=4,pady=10)
+
+    text1 = customtkinter.CTkLabel(cframe,text="If you select 'H TYPE PANEL' Consider section size from TOP to BOTTOM and partitions from LEFT to RIGHT")
+    text1.grid(row=5,column=0,columnspan=4,pady=10)
+
     labelc1 = customtkinter.CTkLabel(cframe,text='Cover clearence X :')
     labelc1.grid(row=1,column=0,padx=30,pady=10)
 
@@ -928,7 +952,7 @@ def top(a):
     cy.grid(row=1,column=3,padx=15,pady=10)
 
     labelc3 = customtkinter.CTkLabel(cframe,text='Mounting plate clearence X :')
-    labelc3.grid(row=2,column=0,padx=10,pady=10)
+    labelc3.grid(row=2,column=0,padx=5,pady=10)
 
     mx = customtkinter.CTkEntry(cframe,width=100)
     mx1= config.get('mounting_plate','mounting_plate_clearence_x')
@@ -936,7 +960,7 @@ def top(a):
     mx.grid(row=2,column=1,padx=15,pady=10)
 
     labelc4 = customtkinter.CTkLabel(cframe,text='Mounting plate clearence Y:')
-    labelc4.grid(row=2,column=2,padx=10,pady=10)
+    labelc4.grid(row=2,column=2,padx=5,pady=10)
 
     my = customtkinter.CTkEntry(cframe,width=100)
     my1= config.get('mounting_plate','mounting_plate_clearence_y')

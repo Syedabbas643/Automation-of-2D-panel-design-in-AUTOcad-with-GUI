@@ -3,7 +3,7 @@ from configparser import ConfigParser
 from math import pi
 
 config = ConfigParser()
-config.read('./OUTDOOR/gi_config_out.ini')
+config.read('./INDDOOR/gi_config_in.ini')
 
 acad = Autocad()
 
@@ -24,10 +24,10 @@ vchannel = int(config["shell"]["Vertical_channel_size"])
 hchannel = int(config["shell"]["Horizontal_channel_size"])
 mpclearx = int(config["mounting_plate"]["mounting_plate_clearence_X"])
 mpcleary = int(config["mounting_plate"]["mounting_plate_clearence_Y"])
-mpclearbot = int(config["mounting_plate"]["mounting_plate_bottom_clearence"])
-mpcleartop = int(config["mounting_plate"]["mounting_plate_top_clearence"])
-zchanneltb = int(config["shell"]["Z_channel_top_bottom_size"])
-zchannelside = int(config["shell"]["Z_channel_side_size"])
+mpclearbot = int(config["mounting_plate"]["mounting_plate_bottom_clearence"]) + sthick
+mpcleartop = int(config["mounting_plate"]["mounting_plate_top_clearence"]) + sthick
+zchanneltb = int(config["shell"]["Top_bottom_shell_size"])
+zchannelside = int(config["shell"]["side_shell_size"])
 dclearx = int(config["doors"]["door_clearence_X"])
 dcleary = int(config["doors"]["door_clearence_Y"])
 dclearmid = int(config["doors"]["door_clearence_MID"])
