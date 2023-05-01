@@ -224,7 +224,7 @@ def top(a):
 
             
 
-        os.system('python ./INDOOR/V_section_panel/GI.py')
+        os.system('python ./INDOOR/GI.py')
 
 
 

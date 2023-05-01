@@ -26,7 +26,7 @@ from GI import dclear
 from GI import lenght
 
 config = ConfigParser()
-config.read('./INDDOOR/gi_config_in.ini')
+config.read('./INDOOR/gi_config_in.ini')
 
 acad = Autocad()
 

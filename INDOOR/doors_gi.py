@@ -3,7 +3,7 @@ from configparser import ConfigParser
 from math import pi
 
 config = ConfigParser()
-config.read('./INDDOOR/gi_config_in.ini')
+config.read('./INDOOR/gi_config_in.ini')
 
 acad = Autocad()
 

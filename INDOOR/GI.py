@@ -8,7 +8,7 @@ acad1.visible = True
 acadmodel = acad1.activedocument.modelspace
 
 config = ConfigParser()
-config.read('./INDDOOR/gi_config_in.ini')
+config.read('./INDOOR/gi_config_in.ini')
 
 acad = Autocad(create_if_not_exists=True)
 acad.prompt("Hello, Autocad from GaMeR")

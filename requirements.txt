@@ -1,0 +1,7 @@
+comtypes==1.1.14
+customtkinter==5.1.2
+Pillow==9.5.0
+Pillow==9.5.0
+pyautocad==0.2.0
+pywin32==306
+configparser==5.3.0
