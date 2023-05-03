@@ -4,7 +4,7 @@ import configparser
 import sys
 import os
 
-def top2(a):
+def top2(a,b):
 
     customtkinter.set_appearance_mode("dark")
     customtkinter.set_default_color_theme('dark-blue')
@@ -226,9 +226,9 @@ def top2(a):
             update('shell','lenght',w)
             update('shell','width',l)
 
-            
-
         os.system('python ./OUTDOOR/GI.py')
+
+            
 
 
 

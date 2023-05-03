@@ -1,5 +1,7 @@
 from pyautocad import Autocad, APoint
 from configparser import ConfigParser
+import sys
+sys.path.append('INDOOR')
 
 
 import win32com.client

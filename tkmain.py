@@ -12,11 +12,11 @@ customtkinter.set_default_color_theme('dark-blue')
 #for writing functions
 def click1():
     root = customtkinter.CTkToplevel()
-    top(root)
+    top(root,main)
 
 def click2():
     root = customtkinter.CTkToplevel()
-    top2(root)
+    top2(root,main)
 
 main = customtkinter.CTk()
 main.title("GaMeR")

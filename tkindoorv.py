@@ -4,7 +4,9 @@ import configparser
 import sys
 import os
 
-def top(a):
+
+
+def top(a,b):
 
     customtkinter.set_appearance_mode("dark")
     customtkinter.set_default_color_theme('dark-blue')
@@ -18,6 +20,7 @@ def top(a):
     config.read('./INDOOR/gi_config_in.ini')
 
     #for function place here
+  
 
     def update(section, key, value):
         #Update config using section key and the value to change
@@ -222,9 +225,15 @@ def top(a):
             update('shell','lenght',w)
             update('shell','width',l)
 
-            
-
         os.system('python ./INDOOR/GI.py')
+        
+        
+        
+
+        
+
+        
+        
 
 
 
@@ -351,7 +360,7 @@ def top(a):
         radiobutton_6.select()
                                     
     button1 = customtkinter.CTkButton(tab_1,text="SAVE",command=save)
-    button1.grid(row=2,column=0)
+    button1.grid(row=2,column=0,padx=10)
 
     #for doors tab (tab_2)
 

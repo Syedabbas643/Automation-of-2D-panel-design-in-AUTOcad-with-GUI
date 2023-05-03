@@ -1,5 +1,7 @@
 from pyautocad import Autocad, APoint
 from configparser import ConfigParser
+import sys
+sys.path.append('OUTDOOR')
 
 config = ConfigParser()
 config.read('./OUTDOOR/gi_config_out.ini')
