@@ -21,6 +21,7 @@ def click2():
 main = customtkinter.CTk()
 main.title("GaMeR")
 main.geometry("670x500")
+main.iconbitmap('myicon.ico')
 main.resizable(False, False)
 
 my_image = customtkinter.CTkImage(light_image=Image.open("png.png"),

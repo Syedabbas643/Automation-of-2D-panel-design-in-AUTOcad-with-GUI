@@ -16,8 +16,6 @@ acadmodel = acad1.activedocument.modelspace
 config = ConfigParser()
 config.read('./INDOOR/gi_config_in.ini')
 
-acad.doc.purgeAll()
-
 print('Using file ' + acad.doc.Name)
 
 inches = config["doors"]["inches"]
@@ -29,9 +27,12 @@ dclearx = int(config["doors"]["door_clearence_X"])
 dcleary = int(config["doors"]["door_clearence_Y"])
 dclearmid = int(config["doors"]["door_clearence_MID"])
 
+block1 = acad.get_selection(text='Select objects')
 
+for x in block1:
+    block_name = x.name
 
-def child_doors_V(a,b,c,d):
+def child_doors_Vv(a,b,c,d):
 
 
     block_name = a
@@ -468,7 +469,7 @@ def child_doors_V(a,b,c,d):
     
 
 
-def child_doors_H(a,b,c,d):
+def child_doors_Hh(a,b,c,d):
 
 
     block_name = a
@@ -902,336 +903,41 @@ def child_doors_H(a,b,c,d):
     except KeyError:
         pass
     newblock.delete()
-    
+
 type = config["shell"]["type_panel"]
 if type == 'v':
-
-    #FOR SECTION 1
-
-    try:
-        child_doors_V('door1_1',0,0,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door1_2',800,0,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door1_3',1600,0,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door1_4',2400,0,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door1_5',3200,0,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door1_6',4000,0,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 2
-
-    try:
-        child_doors_V('door2_1',0,-1200,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door2_2',800,-1200,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door2_3',1600,-1200,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door2_4',2400,-1200,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door2_5',3200,-1200,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door2_6',4000,-1200,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 3
-
-    try:
-        child_doors_V('door3_1',0,-2400,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door3_2',800,-2400,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door3_3',1600,-2400,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door3_4',2400,-2400,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door3_5',3200,-2400,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door3_6',4000,-2400,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 4
-
-    try:
-        child_doors_V('door4_1',0,-3600,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door4_2',800,-3600,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door4_3',1600,-3600,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door4_4',2400,-3600,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door4_5',3200,-3600,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door4_6',4000,-3600,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 5
-
-    try:
-        child_doors_V('door5_1',0,-4800,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door5_2',800,-4800,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door5_3',1600,-4800,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door5_4',2400,-4800,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door5_5',3200,-4800,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door5_6',4000,-4800,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 6
-
-    try:
-        child_doors_V('door6_1',0,-6000,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door6_2',800,-6000,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door6_3',1600,-6000,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door6_4',2400,-6000,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door6_5',3200,-6000,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_V('door6_6',4000,-6000,'n')
-    except COMError:
-        pass
+    if block_name == 'door1_1':
+        child_doors_Vv(block_name,500,0,'y')
+    elif block_name == 'door2_1':
+        child_doors_Vv(block_name,500,0,'y')
+    elif block_name == 'door3_1':
+        child_doors_Vv(block_name,500,0,'y')
+    elif block_name == 'door4_1':
+        child_doors_Vv(block_name,500,0,'y')
+    elif block_name == 'door5_1':
+        child_doors_Vv(block_name,500,0,'y')
+    elif block_name == 'door6_1':
+        child_doors_Vv(block_name,500,0,'y')
+    else:
+        child_doors_Vv(block_name,500,0,'n')
 
 elif type == 'h':
-
-    # for section 1
-
-    try:
-        child_doors_H('door1_1',0,0,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door1_2',800,0,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door1_3',1600,0,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door1_4',2400,0,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door1_5',3200,0,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door1_6',4000,0,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 2
-
-    try:
-        child_doors_H('door2_1',0,-1200,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door2_2',800,-1200,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door2_3',1600,-1200,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door2_4',2400,-1200,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door2_5',3200,-1200,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door2_6',4000,-1200,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 3
-
-    try:
-        child_doors_H('door3_1',0,-2400,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door3_2',800,-2400,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door3_3',1600,-2400,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door3_4',2400,-2400,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door3_5',3200,-2400,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door3_6',4000,-2400,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 4
-
-    try:
-        child_doors_H('door4_1',0,-3600,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door4_2',800,-3600,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door4_3',1600,-3600,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door4_4',2400,-3600,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door4_5',3200,-3600,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door4_6',4000,-3600,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 5
-
-    try:
-        child_doors_H('door5_1',0,-4800,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door5_2',800,-4800,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door5_3',1600,-4800,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door5_4',2400,-4800,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door5_5',3200,-4800,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door5_6',4000,-4800,'n')
-    except COMError:
-        pass
-
-    # FOR SECTION 6
-
-    try:
-        child_doors_H('door6_1',0,-6000,'y')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door6_2',800,-6000,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door6_3',1600,-6000,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door6_4',2400,-6000,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door6_5',3200,-6000,'n')
-    except COMError:
-        pass
-    try:
-        child_doors_H('door6_6',4000,-6000,'n')
-    except COMError:
-        pass
+    if block_name == 'door1_1':
+        child_doors_Hh(block_name,500,0,'y')
+    elif block_name == 'door2_1':
+        child_doors_Hh(block_name,500,0,'y')
+    elif block_name == 'door3_1':
+        child_doors_Hh(block_name,500,0,'y')
+    elif block_name == 'door4_1':
+        child_doors_Hh(block_name,500,0,'y')
+    elif block_name == 'door5_1':
+        child_doors_Hh(block_name,500,0,'y')
+    elif block_name == 'door6_1':
+        child_doors_Hh(block_name,500,0,'y')
+    else:
+        child_doors_Hh(block_name,500,0,'n')
 
 
+    
 acad.app.zoomextents()
 

@@ -1512,6 +1512,7 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
         mountcheck = config["mounting_plate"]["need_mounting_plate"]
         if sec in mountcheck:
             if type == 'h':
+                
                 if hmount == 'mid':
                     if mountpos == "mid":
                         #FOR MOUNTING PLATE MIDDLE
@@ -1529,16 +1530,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -1582,7 +1583,6 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
                         mpp = APoint(mppx,mppy) 
 
                         acad.model.InsertBlock(mpp,blockname, 1, 1, 1, 0)
-                        
                     elif mountpos == 'bot':
                         #FOR MOUNTING PLATE MIDDLE
                         mp1 = APoint(0)
@@ -1599,16 +1599,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -1652,7 +1652,6 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
                         mpp = APoint(mppx,mppy) 
 
                         acad.model.InsertBlock(mpp,blockname, 1, 1, 1, 0)
-                        
                     elif mountpos == 'top':
                         #FOR MOUNTING PLATE MIDDLE
                         mp1 = APoint(0)
@@ -1669,16 +1668,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -1722,7 +1721,6 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
                         mpp = APoint(mppx,mppy) 
 
                         acad.model.InsertBlock(mpp,blockname, 1, 1, 1, 0)
-                        
 
                 elif hmount == 'left':
                     if mountpos == "mid":
@@ -1741,16 +1739,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -1794,7 +1792,7 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
                         mpp = APoint(mppx,mppy) 
 
                         acad.model.InsertBlock(mpp,blockname, 1, 1, 1, 0)
-                        
+                    
                     elif mountpos == 'bot':
                         #FOR MOUNTING PLATE MIDDLE
                         mp1 = APoint(0)
@@ -1811,16 +1809,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -1880,16 +1878,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -1953,16 +1951,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -2022,16 +2020,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -2091,16 +2089,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                         k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                        linem1 = k.addline(mp1,mp2);linem1.color = 50
-                        linem2 = k.addline(mp2,mp3);linem2.color = 50
-                        linem3 = k.addline(mp3,mp4);linem3.color = 50
-                        linem4 = k.addline(mp4,mp1);linem4.color = 50
+                        linem1 = k.addline(mp1,mp2);linem1.color = 51
+                        linem2 = k.addline(mp2,mp3);linem2.color = 51
+                        linem3 = k.addline(mp3,mp4);linem3.color = 51
+                        linem4 = k.addline(mp4,mp1);linem4.color = 51
                         try:
-                            linem5 = linem2.offset(thick);linem5.color = 10
+                            linem5 = linem2.offset(thick);linem5.color = 51
                         except KeyError:
                             pass
                         try:
-                            linem6 = linem4.offset(thick);linem6.color = 10
+                            linem6 = linem4.offset(thick);linem6.color = 51
                         except KeyError:
                             pass
                         
@@ -2163,16 +2161,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                     k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                    linem1 = k.addline(mp1,mp2);linem1.color = 50
-                    linem2 = k.addline(mp2,mp3);linem2.color = 50
-                    linem3 = k.addline(mp3,mp4);linem3.color = 50
-                    linem4 = k.addline(mp4,mp1);linem4.color = 50
+                    linem1 = k.addline(mp1,mp2);linem1.color = 51
+                    linem2 = k.addline(mp2,mp3);linem2.color = 51
+                    linem3 = k.addline(mp3,mp4);linem3.color = 51
+                    linem4 = k.addline(mp4,mp1);linem4.color = 51
                     try:
-                        linem5 = linem1.offset(thick);linem5.color = 10
+                        linem5 = linem1.offset(thick);linem5.color = 51
                     except KeyError:
                         pass
                     try:
-                        linem6 = linem3.offset(thick);linem6.color = 10
+                        linem6 = linem3.offset(thick);linem6.color = 51
                     except KeyError:
                         pass
                     
@@ -2231,16 +2229,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                     k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                    linem1 = k.addline(mp1,mp2);linem1.color = 50
-                    linem2 = k.addline(mp2,mp3);linem2.color = 50
-                    linem3 = k.addline(mp3,mp4);linem3.color = 50
-                    linem4 = k.addline(mp4,mp1);linem4.color = 50
+                    linem1 = k.addline(mp1,mp2);linem1.color = 51
+                    linem2 = k.addline(mp2,mp3);linem2.color = 51
+                    linem3 = k.addline(mp3,mp4);linem3.color = 51
+                    linem4 = k.addline(mp4,mp1);linem4.color = 51
                     try:
-                        linem5 = linem1.offset(thick);linem5.color = 10
+                        linem5 = linem1.offset(thick);linem5.color = 51
                     except KeyError:
                         pass
                     try:
-                        linem6 = linem3.offset(thick);linem6.color = 10
+                        linem6 = linem3.offset(thick);linem6.color = 51
                     except KeyError:
                         pass
                     
@@ -2299,16 +2297,16 @@ def gidoores(a,b,c,d,e,f,g,h,i,j,l):
 
                     k = acad.doc.Blocks.Add(APoint(0),blockname)
 
-                    linem1 = k.addline(mp1,mp2);linem1.color = 50
-                    linem2 = k.addline(mp2,mp3);linem2.color = 50
-                    linem3 = k.addline(mp3,mp4);linem3.color = 50
-                    linem4 = k.addline(mp4,mp1);linem4.color = 50
+                    linem1 = k.addline(mp1,mp2);linem1.color = 51
+                    linem2 = k.addline(mp2,mp3);linem2.color = 51
+                    linem3 = k.addline(mp3,mp4);linem3.color = 51
+                    linem4 = k.addline(mp4,mp1);linem4.color = 51
                     try:
-                        linem5 = linem1.offset(thick);linem5.color = 10
+                        linem5 = linem1.offset(thick);linem5.color = 51
                     except KeyError:
                         pass
                     try:
-                        linem6 = linem3.offset(thick);linem6.color = 10
+                        linem6 = linem3.offset(thick);linem6.color = 51
                     except KeyError:
                         pass
                     

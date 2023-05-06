@@ -13,6 +13,7 @@ def top(a,b):
 
     a.title("GaMeR")
     a.geometry("680x500")
+    a.iconbitmap('myicon.ico')
     a.resizable(False, False)
     a.attributes("-topmost", True)
 
@@ -29,6 +30,34 @@ def top(a,b):
         config.set(section, key, value )
         with open('./INDOOR/gi_config_in.ini', 'w') as output:
             config.write(output)
+
+    def autodoors():
+        update('doors','annotation',varanno.get())
+        update('doors','text_box',vartext.get())
+        update('doors','folding_lenght',df.get())
+        
+        os.system('python ./INDOOR/auto_child_doors.py')
+
+    def singledoors():
+        update('doors','annotation',varanno.get())
+        update('doors','text_box',vartext.get())
+        update('doors','folding_lenght',df.get())
+        
+        os.system('python ./INDOOR/manual_child_doors.py')
+
+    def automp():
+        update('doors','annotation',varanno.get())
+        update('doors','text_box',vartext.get())
+        update('mounting_plate','mounting_plate_folding_lenght',mf.get())
+        update('mounting_plate','mounting_plate_thick',mpt.get())
+
+        os.system('python ./INDOOR/auto_mp.py')
+
+    def autochannel():
+        update('doors','annotation',varanno.get())
+        update('doors','text_box',vartext.get())
+
+        os.system('python ./INDOOR/child_parts.py')
 
     def save():
         l = lenght.get()
@@ -252,6 +281,7 @@ def top(a,b):
     tab_7 = tabview.add("Section4")
     tab_8 = tabview.add("Section5")
     tab_9 = tabview.add("Section6")
+    tab_10 = tabview.add('Child parts')
     tabview.set("SHELL")  # set currently visible tab
 
     #for frame1
@@ -994,3 +1024,101 @@ def top(a,b):
 
     buttonc = customtkinter.CTkButton(tab_3,text="SAVE",command=save)
     buttonc.grid(row=1,column=0,padx=20,pady=10)
+
+    #for child parts tab (tab_10)
+
+    tab10frame = customtkinter.CTkFrame(tab_10)
+    tab10frame.grid(row=0,column=0,padx=25,pady=20,sticky= customtkinter.NSEW)
+
+    labelp= customtkinter.CTkLabel(tab10frame,text="Need Annotation :")
+    labelp.grid(row=0,column=0,padx=10,pady=10)
+
+    inchframe = customtkinter.CTkFrame(tab10frame)
+    inchframe.grid(row=0,column=1,pady=10)
+
+    varanno = customtkinter.StringVar()
+
+    radioinch = customtkinter.CTkRadioButton(master=inchframe, text="YES",value='y',variable=varanno,width=5)                                        
+    radioinch2 = customtkinter.CTkRadioButton(master=inchframe, text="NO",value='n',variable=varanno,width=5)
+    radioinch.grid(row=0,column=0,padx=5)
+    radioinch2.grid(row=0,column=1,padx=5)
+    inc = config.get('doors','annotation')
+    if inc == 'y':
+        radioinch.select()
+    elif inc == 'n':
+        radioinch2.select()
+
+    labelp2= customtkinter.CTkLabel(tab10frame,text="Need Text box :")
+    labelp2.grid(row=0,column=3,padx=10,pady=10)
+
+    inchframe = customtkinter.CTkFrame(tab10frame)
+    inchframe.grid(row=0,column=4,pady=10)
+
+    vartext = customtkinter.StringVar()
+
+    radioinch = customtkinter.CTkRadioButton(master=inchframe, text="YES",value='y',variable=vartext,width=10)                                        
+    radioinch2 = customtkinter.CTkRadioButton(master=inchframe, text="NO",value='n',variable=vartext,width=10)
+    radioinch.grid(row=0,column=0,padx=5)
+    radioinch2.grid(row=0,column=1,padx=5)
+    inc = config.get('doors','text_box')
+    if inc == 'y':
+        radioinch.select()
+    elif inc == 'n':
+        radioinch2.select()
+
+    dframe = customtkinter.CTkFrame(tab10frame)
+    dframe.grid(row=1,column=0,columnspan=6,padx=30,pady=10)
+
+    labelp3= customtkinter.CTkLabel(dframe,text="DOORS :")
+    labelp3.grid(row=0,column=0,pady=10,padx=30)
+
+    buttond = customtkinter.CTkButton(dframe,text=' AUTO ',command=autodoors)
+    buttond.grid(row=0,column=1,padx=40,pady=10) 
+
+    buttond1 = customtkinter.CTkButton(dframe,text=' SINGLE ',command=singledoors)
+    buttond1.grid(row=0,column=2,padx=40,pady=10)
+
+
+    labelp4 = customtkinter.CTkLabel(dframe,text='Door Folding size :')
+    labelp4.grid(row=1,column=0,padx=20,pady=10)
+
+    df = customtkinter.CTkEntry(dframe,width=100)
+    df1= config.get('doors','folding_lenght')
+    df.insert(0,df1)
+    df.grid(row=1,column=1,padx=15,pady=10)
+
+    mframe = customtkinter.CTkFrame(tab10frame)
+    mframe.grid(row=2,column=0,columnspan=6,padx=10,pady=10)
+
+    labelp4= customtkinter.CTkLabel(mframe,text="Mounting Plate :")
+    labelp4.grid(row=0,column=0,pady=10,padx=30)
+
+    buttonm = customtkinter.CTkButton(mframe,text=' AUTO ',command=automp)
+    buttonm.grid(row=0,column=1,padx=20,pady=10) 
+
+    labelp5 = customtkinter.CTkLabel(mframe,text='MP Folding size :')
+    labelp5.grid(row=1,column=0,padx=10,pady=10)
+
+    mf = customtkinter.CTkEntry(mframe,width=100)
+    mf1= config.get('mounting_plate','mounting_plate_folding_lenght')
+    mf.insert(0,mf1)
+    mf.grid(row=1,column=1,padx=15,pady=10)
+
+    labelp6 = customtkinter.CTkLabel(mframe,text='MP Thick :')
+    labelp6.grid(row=1,column=3,padx=10,pady=10)
+
+    mpt = customtkinter.CTkEntry(mframe,width=100)
+    mpt1= config.get('mounting_plate','mounting_plate_thick')
+    mpt.insert(0,mpt1)
+    mpt.grid(row=1,column=4,padx=15,pady=10)
+
+    
+    childframe = customtkinter.CTkFrame(tab10frame)
+    childframe.grid(row=3,column=0,columnspan=6,padx=10,pady=10)
+
+    labelp7= customtkinter.CTkLabel(childframe,text="All channels :")
+    labelp7.grid(row=0,column=0,pady=10,padx=20)
+
+    buttonchild = customtkinter.CTkButton(childframe,text=' AUTO ',command=autochannel)
+    buttonchild.grid(row=0,column=1,padx=20,pady=10)
+

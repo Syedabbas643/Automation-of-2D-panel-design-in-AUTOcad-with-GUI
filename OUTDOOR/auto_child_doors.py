@@ -3,7 +3,7 @@ from comtypes import COMError
 from configparser import ConfigParser
 from math import pi
 import sys
-sys.path.append('INDOOR')
+sys.path.append('OUTDOOR')
 
 acad = Autocad(create_if_not_exists=True)
 acad.prompt("Hello, Autocad from GaMeR\n")
@@ -14,7 +14,7 @@ doc = acad1.ActiveDocument
 acadmodel = acad1.activedocument.modelspace
 
 config = ConfigParser()
-config.read('./INDOOR/gi_config_in.ini')
+config.read('./OUTDOOR/gi_config_out.ini')
 
 acad.doc.purgeAll()
 
